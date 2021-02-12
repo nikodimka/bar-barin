@@ -123,10 +123,11 @@ a:hover {
   transform: scaleX(0);
 }
 .header-menu__nav a:hover:before,
-.header-menu__nav a.active:before {
+.header-menu__nav a:active:before {
   transform: scaleX(1);
 }
-.header-menu__nav a.active {
+.header-menu__nav a:active,
+.header-menu__nav a:focus {
   color: #c0a476;
 }
 #nav-icon {
@@ -433,6 +434,9 @@ a:hover {
   margin-bottom: 25px;
   text-align: center;
 }
+.vip-text.mobile {
+  display: none;
+}
 .vip-gallery .splide__pagination__page {
   border-color: #fff;
 }
@@ -543,7 +547,7 @@ a:hover {
 @media (max-width: 991px) {
   .link-section {
     position: absolute;
-    top: -78px;
+    top: -82px;
     left: 0;
   }
 }
@@ -674,6 +678,15 @@ a:hover {
   }
 }
 @media screen and (max-width: 575px) {
+  .about-benefits {
+    display: none;
+  }
+  .vip-text {
+    display: none;
+  }
+  .vip-text.mobile {
+    display: block;
+  }
   .logo-line {
     width: 90%;
     margin-left: 5%;
